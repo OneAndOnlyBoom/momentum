@@ -35,9 +35,23 @@ function handleTodoForm(event) {
     const newTodo = todoInput.value;
     todoInput.value = "";
     toDos.push(newTodo);
+
     paintToDo(newTodo);
     saveToDos();
 }
+
+function handleDoneForm(event) {
+    //TODO::완료리스트 추가
+    event.preventDefault()
+    const newTodo = todoInput.value;
+    todoInput.value = "";
+    toDos.push(newTodo);
+
+    paintToDo(newTodo);
+    saveToDos();
+}
+
+
 
 todoForm.addEventListener('submit', handleTodoForm)
 
